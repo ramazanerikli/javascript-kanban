@@ -21,8 +21,6 @@ const Column = ({
   handleOver,
   handleDrop,
   deleteTask,
-  showIcon,
-  setShowIcon
 }) => {
   return (
     <div
@@ -54,8 +52,6 @@ const Column = ({
               task={task}
               deleteTask={deleteTask}
               handleDragStart={handleDragStart}
-              showIcon={showIcon}
-              setShowIcon={setShowIcon}
             />
           ))}
       </div>

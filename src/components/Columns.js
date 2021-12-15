@@ -22,8 +22,6 @@ const Columns = ({
   handleOver,
   handleDrop,
   deleteTask,
-  showIcon,
-  setShowIcon
 }) => {
   return (
     <>
@@ -42,8 +40,6 @@ const Columns = ({
             isChecked={isChecked}
             taskPriority={taskPriority}
             deleteTask={deleteTask}
-            showIcon={showIcon}
-            setShowIcon={setShowIcon}
 
             draggingItemId={draggingItemId}
             hoveredColumnName={hoveredColumnName}

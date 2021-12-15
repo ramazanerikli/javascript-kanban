@@ -6,8 +6,6 @@ const Task = ({
   index,
   handleDragStart,
   deleteTask,
-  showIcon,
-  setShowIcon,
 }) => {
   const loweredString = task.priority.toLowerCase();
   const compressedString = loweredString.replace(" ", "-");

@@ -8,8 +8,6 @@ import Columns from "./components/Columns";
 function App() {
   const [open, setOpen] = useState(false);
 
-  const [showIcon, setShowIcon] = useState(false);
-
   let localTasks;
   if (localStorage.getItem('tasks')) {
     localTasks = JSON.parse(localStorage.getItem('tasks'));
@@ -132,8 +130,6 @@ function App() {
             isChecked={isChecked}
             taskPriority={taskPriority}
             deleteTask={deleteTask}
-            showIcon={showIcon}
-            setShowIcon={setShowIcon}
 
             draggingItemId={draggingItemId}
             hoveredColumnName={hoveredColumnName}
