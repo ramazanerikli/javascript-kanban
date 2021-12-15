@@ -20,6 +20,9 @@ const Column = ({
   handleDragStart,
   handleOver,
   handleDrop,
+  deleteTask,
+  showIcon,
+  setShowIcon
 }) => {
   return (
     <div
@@ -49,7 +52,10 @@ const Column = ({
               index={index}
               key={index}
               task={task}
+              deleteTask={deleteTask}
               handleDragStart={handleDragStart}
+              showIcon={showIcon}
+              setShowIcon={setShowIcon}
             />
           ))}
       </div>
@@ -65,7 +71,6 @@ const Column = ({
               <div className="priority-options">
                 <RadioInput
                   setTaskPriority={setTaskPriority}
-                  isChecked={isChecked}
                   taskPriority={taskPriority}
                   name="priority"
                   value="low"
@@ -75,7 +80,6 @@ const Column = ({
                 />
                 <RadioInput
                   setTaskPriority={setTaskPriority}
-                  isChecked={isChecked}
                   taskPriority={taskPriority}
                   name="priority"
                   value="med"
@@ -85,7 +89,6 @@ const Column = ({
                 />
                 <RadioInput
                   setTaskPriority={setTaskPriority}
-                  isChecked={isChecked}
                   taskPriority={taskPriority}
                   name="priority"
                   value="high"

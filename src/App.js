@@ -8,6 +8,8 @@ import Columns from "./components/Columns";
 function App() {
   const [open, setOpen] = useState(false);
 
+  const [showIcon, setShowIcon] = useState(false);
+
   let localTasks;
   if (localStorage.getItem('tasks')) {
     localTasks = JSON.parse(localStorage.getItem('tasks'));
@@ -104,6 +106,12 @@ function App() {
     saveToLocalStorage(newTasks);
   };
 
+  const deleteTask = (id) => {
+    const newList = tasks.filter((task) => task.id !== id);
+    setTasks(newList);
+    saveToLocalStorage(newList);
+  }
+
   return (
     <div className="app">
       <div className="app-header">
@@ -123,6 +131,9 @@ function App() {
             setTaskPriority={setTaskPriority}
             isChecked={isChecked}
             taskPriority={taskPriority}
+            deleteTask={deleteTask}
+            showIcon={showIcon}
+            setShowIcon={setShowIcon}
 
             draggingItemId={draggingItemId}
             hoveredColumnName={hoveredColumnName}

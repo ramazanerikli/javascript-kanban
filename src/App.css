@@ -49,7 +49,10 @@ body {
   flex: 1;
   height: 100%;
   border-top: 5px solid var(--gray);
-
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
 }
 
 .column-title {
@@ -129,6 +132,14 @@ body {
 
 .task-priority {
   text-transform: capitalize;
+}
+
+.delete-icon {
+  visibility: hidden;
+}
+
+.task:hover .delete-icon {
+  visibility: visible;
 }
 
 input[type="radio"]:checked + .low-tag {
@@ -241,10 +252,8 @@ input[type="radio"]:checked, input[type="radio"]:not(:checked) {
   border: none;
 }
 
-.column {
-  transition: all 0.5s ease;
 
-}
+
 
 @media (max-width: 600px) {
   .board {
